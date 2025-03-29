@@ -9,8 +9,9 @@ A simple API built with Node.js, Express, and MySQL, deployed on AWS.
 ## Setup Instructions
 1. Clone the repo: `git clone <repo-url>`
 2. Install dependencies: `npm install`
-3. Set up MySQL database (see SQL scripts in `db_setup.sql` if you add one).
-4. Start the server: `npm start`
+3. Set up MySQL database by creating database called cs421_db
+4. importin cs421_db.sql
+5. Start the server: `npm start`
 
 ## Dependencies
 - express
