@@ -21,4 +21,4 @@ A simple API built with Node.js, Express, and MySQL, deployed on AWS.
 - `GET /subjects`: Returns a list of Software Engineering subjects by year.
 
 ## Deployment
-Hosted on AWS Ubuntu free-tier instance.
+tried to host in a AWS and HEROKU but failed due to priviledge account
