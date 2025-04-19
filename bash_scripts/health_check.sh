@@ -34,11 +34,11 @@ if [ $DISK_USAGE -gt 90 ]; then
   log_message "WARNING: Disk space is below 10% free!"
 fi
 
-# Check if web server (apache2) is running
-if systemctl is-active --quiet apache2; then
-  log_message "Web Server (apache2): Running"
+# Check if PM2 process (cs421-api) is running
+if pm2 list | grep -q "cs421-api"; then
+  log_message "PM2 Process (cs421-api): Running"
 else
-  log_message "WARNING: Web Server (apache2) is not running!"
+  log_message "WARNING: PM2 Process (cs421-api) is not running!"
 fi
 
 # Check API endpoints

@@ -36,13 +36,7 @@ else
   exit 1
 fi
 
-# Restart web server and PM2 process
-if sudo systemctl restart apache2 2>/dev/null; then
-  log_message "Web server (apache2) restarted successfully."
-else
-  log_message "ERROR: Web server restart failed!"
-  exit 1
-fi
+# Now web server restart needed (using pm2 only)
 
 if pm2 restart cs421-api 2>/dev/null; then
   log_message "PM2 process (cs421-api) restarted successfully."

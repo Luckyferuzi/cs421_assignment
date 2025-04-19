@@ -29,10 +29,10 @@ log_message() {
 log_message "Starting backup process..."
 
 # Backup project files
-if tar -czf $BACKUP_FILE $PROJECT_DIR 2>/dev/null; then
+if tar -czf $BACKUP_FILE $PROJECT_DIR; then
   log_message "Project backup successful: $BACKUP_FILE"
 else
-  log_message "ERROR: Project backup failed!"
+  log_message "ERROR: Project backup failed! Check tar command output above."
   exit 1
 fi
 
