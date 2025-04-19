@@ -1,0 +1,11 @@
+=== server_health.log ===
+[2025-04-19 16:27:11] API Endpoint /subjects: 200 OK
+[2025-04-19 16:27:11] Health check completed.
+
+=== backup.log ===
+[2025-04-19 16:27:12] Deleted backups older than 7 days.
+[2025-04-19 16:27:12] Backup process completed.
+
+=== update.log ===
+[2025-04-19 16:27:13] PM2 process (cs421-api) restarted successfully.
+[2025-04-19 16:27:13] Update process completed.
