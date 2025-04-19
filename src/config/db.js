@@ -1,9 +1,9 @@
 const mysql = require('mysql2/promise');
 
 const db = mysql.createPool({
-  host: 'localhost',      // XAMPP MySQL runs locally
-  user: 'root',           // Default XAMPP user
-  password: 'lucky123',           // Default XAMPP password (empty)
+  host: 'localhost',
+  user: 'cs421_user',
+  password: 'securepassword123',
   database: 'cs421_db'
 });
 
