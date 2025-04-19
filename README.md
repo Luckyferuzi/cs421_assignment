@@ -54,3 +54,47 @@ Hosted on AWS EC2 Ubuntu instance (t3.micro).
 - **Disadvantages**:
   - Backup size increases over time.
   - Slower than incremental backups.
+## Bash Scripts for Server Management
+
+### Overview
+These scripts automate server management tasks for the API deployed on AWS EC2.
+
+### Scripts
+
+#### 1. health_check.sh
+- **Purpose**: Monitors server resource usage (CPU, memory, disk) and API status.
+- **Features**:
+  - Checks CPU, memory, and disk usage.
+  - Verifies Apache2 is running.
+  - Tests API endpoints `/students` and `/subjects`.
+  - Logs results to `/var/log/server_health.log`.
+
+#### 2. backup_api.sh
+- **Purpose**: Backs up API project files and database.
+- **Features**:
+  - Backs up project directory to `/home/ubuntu/backups/api_backup_<date>.tar.gz`.
+  - Exports MySQL database to `/home/ubuntu/backups/db_backup_<date>.sql`.
+  - Deletes backups older than 7 days.
+  - Logs to `/var/log/backup.log`.
+
+#### 3. update_server.sh
+- **Purpose**: Updates server and API.
+- **Features**:
+  - Updates Ubuntu packages.
+  - Pulls latest code from GitHub.
+  - Restarts Apache2 and PM2 process.
+  - Logs to `/var/log/update.log`.
+
+### Setup Instructions
+1. Clone the repository: `git clone https://github.com/Luckyferuzi/cs421_assignment.git`
+2. Navigate to `bash_scripts` directory: `cd cs421_assignment/bash_scripts`
+3. Set execute permissions: `chmod +x health_check.sh backup_api.sh update_server.sh`
+4. Ensure dependencies are installed:
+   - `curl` (for API checks): `sudo apt install curl`
+   - `mysql-client` (for database backup): `sudo apt install mysql-client`
+5. Run scripts manually or schedule with cron (see below).
+
+### Dependencies
+- `curl`: For testing API endpoints.
+- `mysql-client`: For database backups.
+- `apache2` and `pm2`: For web server and process management.
