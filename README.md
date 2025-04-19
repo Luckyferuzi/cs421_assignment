@@ -4,14 +4,13 @@
 
 
 ## Overview
-A simple API built with Node.js, Express, and MySQL, deployed on AWS.
+A simple API built with Node.js, Express, and MySQL, deployed on AWS EC2.
 
 ## Setup Instructions
-1. Clone the repo: `git clone <repo-url>`
+1. Clone the repo: `git clone https://github.com/Luckyferuzi/cs421_assignment.git`
 2. Install dependencies: `npm install`
-3. Set up MySQL database by creating database called cs421_db
-4. importin cs421_db.sql
-5. Start the server: `npm start`
+3. Set up MySQL database (see SQL setup in project notes).
+4. Start the server: `npm start`
 
 ## Dependencies
 - express
@@ -22,4 +21,5 @@ A simple API built with Node.js, Express, and MySQL, deployed on AWS.
 - `GET /subjects`: Returns a list of Software Engineering subjects by year.
 
 ## Deployment
-tried to host in a AWS and HEROKU but failed due to priviledge account
+Hosted on AWS EC2 Ubuntu instance (t3.micro).
+- Base URL: http://16.171.225.235:3000
