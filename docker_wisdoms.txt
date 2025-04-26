@@ -1,0 +1,14 @@
+Server running on port 3000
+Fetching students from database...
+Students fetched successfully: [
+  { id: 1, name: 'khalifa feruzi', program: 'Software Engineering' },
+  { id: 2, name: 'fadhili mjala', program: 'Software Engineering' },
+  { id: 3, name: 'kabipe', program: 'Software Engineering' },
+  { id: 4, name: 'lutfia suleiman', program: 'Software Engineering' },
+  { id: 5, name: 'daud ally', program: 'Software Engineering' },
+  { id: 6, name: 'Peter Parker', program: 'Software Engineering' },
+  { id: 7, name: 'Sarah juma', program: 'Software Engineering' },
+  { id: 8, name: 'Tomas makululin', program: 'Software Engineering' },
+  { id: 9, name: 'Emma Watson', program: 'Software Engineering' },
+  { id: 10, name: 'James Bond', program: 'Software Engineering' }
+]
