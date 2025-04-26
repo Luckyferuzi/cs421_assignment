@@ -98,3 +98,6 @@ These scripts automate server management tasks for the API deployed on AWS EC2.
 - `curl`: For testing API endpoints.
 - `mysql-client`: For database backups.
 - `apache2` and `pm2`: For web server and process management.
+
+## Docker Hub
+- Docker image: https://hub.docker.com/r/luckyferuzi/cs421-api
