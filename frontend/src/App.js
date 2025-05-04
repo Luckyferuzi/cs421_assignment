@@ -99,7 +99,7 @@ function App() {
           <h2>Courses</h2>
           <ul>
             {subjects.map(subject => (
-              <li key={subject.id}>{subject.name} (Year {subject.year})</li>
+              <li key={subject.id}>{subject.subject_name} (Year {subject.academic_year})</li>
             ))}
           </ul>
         </div>

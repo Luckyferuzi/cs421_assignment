@@ -1,0 +1,7 @@
+CONTAINER ID   IMAGE                  COMMAND                  CREATED          STATUS                 PORTS                                       NAMES
+dedeb2a04af0   cs421-loadbalancer     "/docker-entrypoint.…"   11 minutes ago   Up 11 minutes          0.0.0.0:80->80/tcp, :::80->80/tcp           cs421_assignment-loadbalancer-1
+060ebefa177e   cs421-frontend         "docker-entrypoint.s…"   11 minutes ago   Up 11 minutes          0.0.0.0:3004->3002/tcp, :::3004->3002/tcp   cs421_assignment-frontend3-1
+a2fd7df92746   cs421-frontend         "docker-entrypoint.s…"   11 minutes ago   Up 11 minutes          0.0.0.0:3002->3002/tcp, :::3002->3002/tcp   cs421_assignment-frontend1-1
+12b4aa721cf2   cs421-frontend         "docker-entrypoint.s…"   11 minutes ago   Up 11 minutes          0.0.0.0:3003->3002/tcp, :::3003->3002/tcp   cs421_assignment-frontend2-1
+b14d907bd8b2   cs421_assignment-api   "docker-entrypoint.s…"   7 hours ago      Up 7 hours             0.0.0.0:5000->3000/tcp, :::5000->3000/tcp   cs421_assignment-api-1
+7dff73830c86   mysql:8.0              "docker-entrypoint.s…"   7 hours ago      Up 7 hours (healthy)   3306/tcp, 33060/tcp                         cs421_assignment-db-1

@@ -101,3 +101,18 @@ These scripts automate server management tasks for the API deployed on AWS EC2.
 
 ## Docker Hub
 - Docker image: https://hub.docker.com/r/luckyferuzi/cs421-api
+
+## Overview
+This repository contains a front-end application and API for the CS421 assignment, deployed using Docker and a load balancer.
+
+## Prerequisites
+- Docker and Docker Compose installed
+- Git
+- Access to an EC2 instance with a public IP
+
+## Setup Instructions
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Luckyferuzi/cs421_assignment.git
+cd cs421_assignment
