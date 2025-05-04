@@ -5,7 +5,7 @@ const db = require('../config/db');
 router.get('/', async (req, res) => {
 try {
 console.log('Fetching subjects from database...');
-const [subjects] = await db.query('SELECT id, subject_name AS name, academic_year AS year FROM subjects');
+const [subjects] = await db.query('SELECT * FROM subjects');
 console.log('Subjects fetched successfully:', subjects);
 res.status(200).json(subjects);
 } catch (error) {

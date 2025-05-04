@@ -4,7 +4,7 @@ services:
   api:
     build: .
     ports:
-      - "3000:3000"
+      - "5000:3000"
     environment:
       - DB_HOST=db
       - DB_USER=cs421_user
@@ -30,6 +30,63 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+    networks:
+      - app-network
+
+  frontend1:
+    image: cs421-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ID=frontend1
+    ports:
+      - "3002:3002"
+    depends_on:
+      - api
+    networks:
+      - app-network
+
+  frontend2:
+    image: cs421-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ID=frontend2
+    ports:
+      - "3003:3002"
+    depends_on:
+      - api
+    networks:
+      - app-network
+
+  frontend3:
+    image: cs421-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ID=frontend3
+    ports:
+      - "3004:3002"
+    depends_on:
+      - api
+    networks:
+      - app-network
+
+  loadbalancer:
+    image: cs421-loadbalancer
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend1
+      - frontend2
+      - frontend3
+      - api
     networks:
       - app-network
 
