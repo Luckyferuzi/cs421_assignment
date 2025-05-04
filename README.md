@@ -116,3 +116,40 @@ This repository contains a front-end application and API for the CS421 assignmen
 ```bash
 git clone https://github.com/Luckyferuzi/cs421_assignment.git
 cd cs421_assignment
+
+##Load Balancer Setup
+Tool Chosen: Mginx was selected as the load balancer
+
+configuration file:
+the nginx.conf file configures NGINX to distribute traffic across three front-end instances (frontend1,frontend2,frontend3)
+
+Docker integration
+Dockerfile.nginx is ued to build the load balancer image (cs421-loadbalancer);
+
+docker-compose.yml  includes the load balancer services (loadbalancer) alongside three front-end instances, a single API instances and the databases
+
+Network all services are connected via the app-network (bridge driver)
+
+ Version Control and Docker Registry
+
+
+
+
+
+Version Control:
+
+
+
+
+
+All changes (Dockerfile, docker-compose.yml, front-end code, nginx.conf, updated README.md) are committed to the GitHub repository.
+
+
+
+Docker Registry:
+
+
+
+
+
+Docker images (cs421-api, cs421-frontend, cs421-loadbalancer) are uploaded to Docker Hub (see below for URLs).
